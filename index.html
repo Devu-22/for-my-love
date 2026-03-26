@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For My Love ❤️</title>
+  <title>For Frino ❤️</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -13,13 +13,17 @@
 
 <body class="flex flex-col items-center justify-center text-center">
 
-  <!-- HERO SECTION -->
+  <!-- 🎶 MUSIC -->
+  <audio id="bgMusic" loop controls>
+  <source src="music/music1.mp3" type="audio/mpeg">
+</audio>
+
+  <!-- HERO -->
   <div class="card">
-    <h1 class="title">🎂 Happy Birthday My Love 🎂</h1>
+    <h1 class="title">🎂 Happy Birthday Frino ❤️</h1>
 
     <p class="message">
-      From the moment you came into my life, everything became brighter.  
-      You are my happiness, my safe place, and my favorite person. 💖
+      Today is all about you… the most important person in my life 💖
     </p>
 
     <button onclick="startSurprise()" class="btn">
@@ -27,30 +31,49 @@
     </button>
 
     <p id="hiddenMsg" class="hidden-msg">
-      I love you more than words can ever express ❤️
+      You are my everything ❤️
     </p>
   </div>
 
-  <!-- IMAGE GALLERY -->
-  <div class="gallery">
-    <h2>📸 Our Memories</h2>
-
-    <div class="images">
-      <img src="images/pic1.jpg" />
-      <img src="images/pic2.jpg" />
-      <img src="images/pic3.jpg" />
-    </div>
-  </div>
-
-  <!-- LOVE LETTER -->
+  <!-- 💌 LETTER -->
   <div class="letter">
     <h2>💌 A Letter For You</h2>
-    <p>
-      Happy Birthday, my love.  
-      Every moment with you is special, every smile of yours is precious.  
-      I am so lucky to have you in my life.  
-      I promise to always stand by your side, no matter what. 💕
+
+    <p class="message">
+      You are the best thing that has ever happened in my life.  
+      <br><br>
+      Before you came, I thought I was already perfect and complete…  
+      but after you entered my life, I started realizing parts of myself I never understood before.  
+      You made me see my strengths… and also my imperfections.  
+      <br><br>
+      And now, I am trying to grow… to become a better person — because of you.  
+      Because you inspire me in ways no one else ever could.  
+      <br><br>
+      You deserve all the happiness, success, and love in this world.  
+      I want you to achieve everything you dream of… and even more.  
+      <br><br>
+      And even if I don’t achieve everything in life,  
+      I will still be the happiest person if I see you winning. 💖  
+      <br><br>
+      I will always be there for you… supporting you, loving you, and standing beside you in every moment.  
+      <br><br>
+      Happy Birthday, my love. ❤️
     </p>
+  </div>
+
+  <!-- 📸 POPUP GALLERY -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+
+      <h2>📸 Our Beautiful Memories ❤️</h2>
+
+      <div class="images">
+        <img src="images/pic1.jfif" />
+        <img src="images/pic2.jfif" />
+        <img src="images/pic3.jfif" />
+      </div>
+    </div>
   </div>
 
   <script src="js/scripts.js"></script>
