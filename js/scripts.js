@@ -61,12 +61,11 @@ function startSurprise() {
     const music = document.getElementById("bgMusic");
 
     if (music) {
-        music.play().catch(() => {});
+        music.muted = false; // 🔥 unmute
+        music.play();
     }
 
     document.getElementById("hiddenMsg").style.display = "block";
-
-    // show first popup
     document.getElementById("popup1").style.display = "block";
 
     confetti({
