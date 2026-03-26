@@ -15,7 +15,7 @@
 
   <!-- 🎶 MUSIC -->
   <audio id="bgMusic" loop controls>
-  <source src="music/music1.mp3" type="audio/mpeg">
+  <source src="../music/music1.mp3" type="audio/mpeg">
 </audio>
 
   <!-- HERO -->
@@ -62,20 +62,97 @@
   </div>
 
   <!-- 📸 POPUP GALLERY -->
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
+  <!-- 📸 POPUP 1 -->
+<div id="popup1" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('popup1')">&times;</span>
 
-      <h2>📸 Our Beautiful Memories ❤️</h2>
+    <h2>📸 Our Beautiful Memories ❤️</h2>
 
-      <div class="images">
-        <img src="images/pic1.jfif" />
-        <img src="images/pic2.jfif" />
-        <img src="images/pic3.jfif" />
-      </div>
-    </div>
+    <div class="grid">
+  <div class="img-box">
+    <img src="images/img1.jpeg" />
+    <div class="overlay">First Memory 💕</div>
   </div>
 
-  <script src="js/scripts.js"></script>
+  <div class="img-box">
+    <img src="images/img3.jpeg" />
+    <div class="overlay">Your Smile 😍</div>
+  </div>
+
+  <div class="img-box">
+    <img src="images/img4.jpeg" />
+    <div class="overlay">My Favorite ❤️</div>
+  </div>
+
+  <div class="img-box">
+    <img src="images/img7.jpeg" />
+    <div class="overlay">That Day 💖</div>
+  </div>
+
+  <div class="img-box">
+    <img src="images/img6.jpeg" />
+    <div class="overlay">My Peace 🌙</div>
+  </div>
+</div>
+
+    <button class="btn" onclick="nextPopup()">Next ➡️</button>
+  </div>
+</div>
+
+<!-- 📸 POPUP 2 -->
+<div id="popup2" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('popup2')">&times;</span>
+
+    <h2>💖 More Memories</h2>
+
+    <div class="grid">
+  <div class="img-box">
+    <img src="images/img2.jpeg" />
+    <div class="overlay">You & Me ❤️</div>
+  </div>
+
+  <div class="img-box">
+    <img src="images/img5.jpeg" />
+    <div class="overlay">Happiest Moments 💕</div>
+  </div>
+
+  <div class="img-box">
+    <img src="images/img8.jpeg" />
+    <div class="overlay">Your Eyes 😍</div>
+  </div>
+
+  <div class="img-box">
+    <img src="images/img9.jpeg" />
+    <div class="overlay">My World 🌍</div>
+  </div>
+
+  <div class="img-box">
+    <img src="images/img10.jpeg" />
+    <div class="overlay">Forever Us 🫶</div>
+  </div>
+</div>
+
+    <button class="btn" onclick="showFinal()">One Last Thing ❤️</button>
+  </div>
+</div>
+
+<!-- 💖 FINAL INTIMATE MOMENT -->
+<div id="finalPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('finalPopup')">&times;</span>
+
+    <h2>❤️ Just Us</h2>
+
+    <img src="images/intimate.jpeg" style="width:100%; border-radius:15px;" />
+
+    <p style="margin-top:15px; font-size:18px; color:#ff2e63;">
+      I wish I could be with you from this birthday onwards… forever ❤️
+    </p>
+  </div>
+</div>
+
+  <script src="../js/scripts.js"></script>
 </body>
 </html>
