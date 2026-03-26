@@ -230,3 +230,109 @@ body {
     from { opacity: 0; transform: scale(0.8); }
     to { opacity: 1; transform: scale(1); }
 }
+
+
+/* GRID FOR IMAGES */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+/* Last row (2 images centered) */
+.grid img:nth-child(4),
+.grid img:nth-child(5) {
+    grid-column: span 1;
+}
+
+/* Center last row */
+.grid img:nth-child(4) {
+    grid-column: 2 / 3;
+}
+.grid img:nth-child(5) {
+    grid-column: 3 / 4;
+}
+
+.grid img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.popup-content {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 900px; /* 🔥 bigger */
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+/* image wrapper */
+.img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* image style */
+.img-box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.4s ease;
+}
+
+/* hover zoom */
+.img-box:hover img {
+    transform: scale(1.15);
+}
+
+/* overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 46, 99, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+/* show overlay on hover */
+.img-box:hover .overlay {
+    opacity: 1;
+}
+
+/* center last row (2 images) */
+.grid .img-box:nth-child(4) {
+    grid-column: 2 / 3;
+}
+.grid .img-box:nth-child(5) {
+    grid-column: 3 / 4;
+}
+
+.img-box:hover {
+    box-shadow: 0 0 20px rgba(255, 46, 99, 0.7);
+}
